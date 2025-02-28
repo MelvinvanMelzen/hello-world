@@ -1,0 +1,16 @@
+services:
+  docs:
+    image: hello_world_local_docs
+    container_name: hello_world_local_docs
+    build:
+      context: .
+      dockerfile: ./compose/local/docs/Dockerfile
+    env_file:
+      - ./.envs/.local/.django
+    volumes:
+      - ./docs:/docs:z
+      - ./config:/app/config:z
+      - ./hello_world:/app/hello_world:z
+    ports:
+      - '9000:9000'
+    command: /start-docs
