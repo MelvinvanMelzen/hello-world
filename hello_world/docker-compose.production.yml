@@ -3,7 +3,7 @@ volumes:
   production_postgres_data_backups: {}
   production_traefik: {}
   production_django_media: {}
-  
+
 
 
 services:
@@ -43,13 +43,13 @@ services:
       - django
     volumes:
       - production_traefik:/etc/traefik/acme
-    ports:
-      - '0.0.0.0:80:80'
-      - '0.0.0.0:443:443'
+#    ports:
+#      - '0.0.0.0:80:80'
+#      - '0.0.0.0:443:443'
 
   redis:
     image: docker.io/redis:6
-    
+
 
   nginx:
     build:
