@@ -98,7 +98,6 @@ ADMIN_URL = env("DJANGO_ADMIN_URL")
 # Zeptomail
 # ------------------------------------------------------------------------------
 # https://www.zoho.com/zeptomail/django-integration.html
-INSTALLED_APPS += ["django-zoho-zeptomail"]
 EMAIL_BACKEND = "zoho_zeptomail.backend.zeptomail_backend.ZohoZeptoMailEmailBackend"
 ZOHO_ZEPTOMAIL_API_KEY_TOKEN = env("ZOHO_ZEPTOMAIL_API_KEY_TOKEN")
 ZOHO_ZEPTOMAIL_HOSTED_REGION = env("ZOHO_ZEPTOMAIL_HOSTED_REGION")
